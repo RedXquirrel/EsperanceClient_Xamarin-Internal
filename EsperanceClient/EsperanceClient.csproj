@@ -34,6 +34,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AppBootstrap.cs" />
     <Compile Include="EsperanceClient.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -80,9 +81,37 @@
       <Project>{c1f34b16-a86a-4c24-8e02-78d1806d129c}</Project>
       <Name>Chat.Esperance.Xamarin.Forms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Automation\Automation\Donky.Automation.csproj">
+      <Project>{45c82f98-4d0f-410a-81e2-14dab7cb7a21}</Project>
+      <Name>Donky.Automation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Donky\Donky.Core.Xamarin\Core.Xamarin.Forms\Donky.Core.Xamarin.Forms.csproj">
       <Project>{9d206e80-e210-4dc0-9d4c-e0df72b18780}</Project>
       <Name>Donky.Core.Xamarin.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Core\Core.Analytics\Donky.Core.Analytics.csproj">
+      <Project>{07913557-e20b-4bd8-9790-157757b2a5bb}</Project>
+      <Name>Donky.Core.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Core\Core\Donky.Core.csproj">
+      <Project>{224c3184-5be6-4ce3-b437-dfcd6b01f217}</Project>
+      <Name>Donky.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Messaging\Common\Donky.Messaging.Common.csproj">
+      <Project>{7e5f8327-6d08-422c-99de-459b4cd22b4e}</Project>
+      <Name>Donky.Messaging.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Messaging\Push.Logic\Donky.Messaging.Push.Logic.csproj">
+      <Project>{d811621c-0479-4c65-87b3-294cb5640591}</Project>
+      <Name>Donky.Messaging.Push.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Messaging\Rich.Logic\Donky.Messaging.Rich.Logic.csproj">
+      <Project>{9e2e273e-752d-4dbc-9813-a4e8febf8f35}</Project>
+      <Name>Donky.Messaging.Rich.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Messaging\Rich.PopupUI.XamarinForms\Donky.Messaging.Rich.PopupUI.XamarinForms.csproj">
+      <Project>{b4bfec16-682e-490b-bb92-0bab99a64d40}</Project>
+      <Name>Donky.Messaging.Rich.PopupUI.XamarinForms</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6490\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

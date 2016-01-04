@@ -73,13 +73,28 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchFloat32>true</MtouchFloat32>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DeviceSpecificBuild>true</DeviceSpecificBuild>
-    <MtouchDebug>true</MtouchDebug>
-    <MtouchUseSGen>true</MtouchUseSGen>
-    <MtouchUseRefCounting>true</MtouchUseRefCounting>
-    <MtouchProfiling>true</MtouchProfiling>
+    <DeviceSpecificBuild>True</DeviceSpecificBuild>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchUseSGen>True</MtouchUseSGen>
+    <MtouchUseRefCounting>True</MtouchUseRefCounting>
+    <MtouchProfiling>True</MtouchProfiling>
+    <MtouchSdkVersion>9.2</MtouchSdkVersion>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchFastDev>False</MtouchFastDev>
+    <MtouchUseLlvm>False</MtouchUseLlvm>
+    <MtouchUseThumb>False</MtouchUseThumb>
+    <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
+    <MtouchI18n />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ImageCircle.Forms.Plugin.Abstractions, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.3.0\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageCircle.Forms.Plugin.iOS, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xam.Plugins.Forms.ImageCircle.1.3.0\lib\Xamarin.iOS10\ImageCircle.Forms.Plugin.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -120,6 +135,18 @@
       <Project>{9d206e80-e210-4dc0-9d4c-e0df72b18780}</Project>
       <Name>Donky.Core.Xamarin.Forms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Core.Xamarin\Core.Xamarin.iOS.Forms\Donky.Core.Xamarin.iOS.Forms.csproj">
+      <Project>{0b3c8a1b-ea5c-425c-aca4-82ae6b4dfa65}</Project>
+      <Name>Donky.Core.Xamarin.iOS.Forms</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Core.Xamarin\Core.Xamarin.iOS\Donky.Core.Xamarin.iOS.csproj">
+      <Project>{d44b6f6b-e72b-4fcc-9806-677fa3a0c115}</Project>
+      <Name>Donky.Core.Xamarin.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
     <ProjectReference Include="..\Donky\Donky.Core\Core.Analytics\Donky.Core.Analytics.csproj">
       <Project>{07913557-e20b-4bd8-9790-157757b2a5bb}</Project>
       <Name>Donky.Core.Analytics</Name>
@@ -127,6 +154,12 @@
     <ProjectReference Include="..\Donky\Donky.Core\Core\Donky.Core.csproj">
       <Project>{224c3184-5be6-4ce3-b437-dfcd6b01f217}</Project>
       <Name>Donky.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Donky\Donky.Messaging\Push.UI.iOS\Donky.Messaging.Push.UI.iOS.csproj">
+      <Project>{328a82be-8b67-4bca-974a-2b34fdbaa998}</Project>
+      <Name>Donky.Messaging.Push.UI.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
     <ProjectReference Include="..\EsperanceClient\EsperanceClient.csproj">
       <Project>{DC1C920F-8FBF-4412-AA6C-EC0FF7CEDD2D}</Project>
