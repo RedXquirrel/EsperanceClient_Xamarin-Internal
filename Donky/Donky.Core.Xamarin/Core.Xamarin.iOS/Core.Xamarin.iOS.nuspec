@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Donky.Core.Xamarin.iOS</id>
+		<version>2.2.0</version>
+		<title>Donky Core - Xamarin iOS</title>
+		<authors>Donky Networks Ltd</authors>
+		<owners>Donky Networks Ltd</owners>
+		<projectUrl>https://github.com/donky-network</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Donky Core functionality for Xamarin iOS</description>
+		<copyright>Copyright 2015</copyright>
+		<tags>donky mobiledonky core xamarin ios</tags>
+		<dependencies>
+			<dependency id="Donky.Core" version="2.2.0" />
+    
+      <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
+      <dependency id="Xam.Plugins.Forms.ImageCircle" version="1.1.4" />
+      <dependency id="Xamarin.Forms" version="1.5.0.6446" />
+  
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\iPhone\Release\Donky.Core.Xamarin.iOS.dll" target="lib" />
+	</files>
+</package>

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{5D00EF60-AB1F-4D28-A914-CBEF9314F009}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{85ABF70F-B227-48FC-9E98-80A1D9FE1EF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "..\Donky.Core\Core\Core.csproj", "{224C3184-5BE6-4CE3-B437-DFCD6B01F217}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Xamarin.iOS", "Core.Xamarin.iOS\Core.Xamarin.iOS.csproj", "{D44B6F6B-E72B-4FCC-9806-677FA3A0C115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Xamarin.Android", "Core.Xamarin.Android\Core.Xamarin.Android.csproj", "{8247EA89-8A36-4519-AE96-F01C0D518CC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Xamarin.Forms", "Core.Xamarin.Forms\Core.Xamarin.Forms.csproj", "{67F9D3A8-F71E-4428-913F-C37AE82CDB24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{680B675E-EE78-47A4-A461-59D03CFF2002}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{224C3184-5BE6-4CE3-B437-DFCD6B01F217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224C3184-5BE6-4CE3-B437-DFCD6B01F217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224C3184-5BE6-4CE3-B437-DFCD6B01F217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224C3184-5BE6-4CE3-B437-DFCD6B01F217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44B6F6B-E72B-4FCC-9806-677FA3A0C115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44B6F6B-E72B-4FCC-9806-677FA3A0C115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44B6F6B-E72B-4FCC-9806-677FA3A0C115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44B6F6B-E72B-4FCC-9806-677FA3A0C115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8247EA89-8A36-4519-AE96-F01C0D518CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8247EA89-8A36-4519-AE96-F01C0D518CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8247EA89-8A36-4519-AE96-F01C0D518CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8247EA89-8A36-4519-AE96-F01C0D518CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{224C3184-5BE6-4CE3-B437-DFCD6B01F217} = {5D00EF60-AB1F-4D28-A914-CBEF9314F009}
+		{D44B6F6B-E72B-4FCC-9806-677FA3A0C115} = {5D00EF60-AB1F-4D28-A914-CBEF9314F009}
+		{8247EA89-8A36-4519-AE96-F01C0D518CC1} = {5D00EF60-AB1F-4D28-A914-CBEF9314F009}
+		{67F9D3A8-F71E-4428-913F-C37AE82CDB24} = {5D00EF60-AB1F-4D28-A914-CBEF9314F009}
+	EndGlobalSection
+EndGlobal

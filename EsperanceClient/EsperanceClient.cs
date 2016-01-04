@@ -1,11 +1,12 @@
-﻿using EsperanceClient.Pages;
+﻿using Chat.Esperance.Xamarin.Forms;
+using EsperanceClient.Pages;
 using System;
 
 using Xamarin.Forms;
 
 namespace EsperanceClient
 {
-	public class App : Application
+	public class App : EsperanceApplication
 	{
 		public App ()
 		{

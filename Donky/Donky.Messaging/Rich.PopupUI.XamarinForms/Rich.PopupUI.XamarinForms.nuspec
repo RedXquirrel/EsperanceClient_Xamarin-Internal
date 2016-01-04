@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+	<metadata>
+		<id>Donky.Messaging.Rich.PopupUI.XamarinForms</id>
+		<version>2.2.0-beta</version>
+		<title>Donky Messaging - Rich Popup UI (Xamarin Forms)</title>
+		<authors>Donky Networks Ltd</authors>
+		<owners>Donky Networks Ltd</owners>
+		<projectUrl>https://github.com/donky-network</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Xamarin Forms Popup UI for Donky Rich Messaging</description>
+		<copyright>Copyright 2015</copyright>
+		<tags>donky mobiledonky messaging rich ui xamarin forms</tags>
+		<dependencies>
+      
+			<dependency id="Donky.Core" version="2.2.0" />
+			<dependency id="Donky.Core.Xamarin.Forms" version="2.2.0" />
+			<dependency id="Donky.Messaging.Common" version="2.2.0" />
+			<dependency id="Donky.Messaging.Rich.Logic" version="2.2.0" />
+
+      <dependency id="Autofac" version="3.5.2" />
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.3" />
+      <dependency id="Microsoft.Bcl" version="1.1.10" />
+      <dependency id="Microsoft.Bcl.Build" version="1.0.21" />
+      <dependency id="Microsoft.Net.Http" version="2.2.28" />
+      <dependency id="Newtonsoft.Json" version="7.0.1" />
+      <dependency id="Xamarin.Forms" version="1.5.0.6446" />
+
+    </dependencies>
+	</metadata>
+	<files>
+		<file src="bin\Release\Donky.Messaging.Rich.PopupUI.XamarinForms.dll" target="lib" />
+	</files>
+</package>

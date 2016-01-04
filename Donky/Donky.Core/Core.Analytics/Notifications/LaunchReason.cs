@@ -1,0 +1,15 @@
+// ///////////////////////////////////////////////////////////////////////////////////////////
+//  Description:     LaunchReason enum
+//  Author:          Ben Moore
+//  Created date:    21/05/2015
+//  Copyright:       Donky Networks Ltd 2015
+// ///////////////////////////////////////////////////////////////////////////////////////////
+namespace Donky.Core.Analytics.Notifications
+{
+	public enum LaunchReason
+	{
+		NotDefined = 0,
+		None,
+		Notification
+	}
+}
