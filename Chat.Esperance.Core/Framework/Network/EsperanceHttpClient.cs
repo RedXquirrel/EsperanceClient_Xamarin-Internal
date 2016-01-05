@@ -10,11 +10,12 @@ namespace Chat.Esperance.Core.Framework.Network
     using System.IO;
     using System.Net;
     using System.Net.Http;
-    using System.Net.Http.Formatting;
     using System.Threading.Tasks;
     using ModernHttpClient;
     using System.Threading;
     using Services;
+    using System.Net.Http.Formatting;
+
 
     namespace Donky.Core.Framework.Network
     {
