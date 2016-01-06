@@ -1,0 +1,5 @@
+﻿//For all standard remote notiications:
+//Where the %1$@ is the name of the sender. 
+//You can remove this and simply 
+//have the %2$@ or vica versa.
+"MSG_PRV" = "%1$@ - %2$@";

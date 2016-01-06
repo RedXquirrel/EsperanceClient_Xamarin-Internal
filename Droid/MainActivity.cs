@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Donky.Core.Xamarin.Android;
 
 namespace EsperanceClient.Droid
 {
@@ -16,6 +17,9 @@ namespace EsperanceClient.Droid
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+
+            // Ensure Donky knows if we were launched from a notification
+            DonkyAndroid.ActivityLaunchedWithIntent(this);
 
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 

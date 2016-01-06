@@ -1,5 +1,4 @@
 ﻿using Chat.Esperance.Xamarin.Forms;
-using Donky.Core.Xamarin.Forms;
 using EsperanceClient.Pages;
 using System;
 

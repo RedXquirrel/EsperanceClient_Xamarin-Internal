@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace Chat.Esperance.Core
 {
+    // ToDo:    Both System.Net.Http.Extensions and System.Net.Http.Extensions presently referenced by browsing to the assemblies instead of deploying them via Nuget.
+    //          Fix this!
     public static class EsperanceCore
     {
         private static Lazy<IEsperanceCore> _lazyInstance = new Lazy<IEsperanceCore>(CreateInstance, LazyThreadSafetyMode.ExecutionAndPublication);

@@ -28,6 +28,44 @@ namespace EsperanceClient.iOS
 
 			return base.FinishedLaunching (app, options);
 		}
+
+        public override void RegisteredForRemoteNotifications(
+            UIApplication application,
+            NSData deviceToken)
+        {
+            DonkyiOS.RegisteredForRemoteNotifications(application, deviceToken);
+        }
+
+        public override void DidReceiveRemoteNotification(
+          UIApplication application,
+          NSDictionary userInfo,
+          Action<UIBackgroundFetchResult> completionHandler)
+        {
+            DonkyiOS.DidReceiveRemoteNotification(
+              application,
+              userInfo,
+              completionHandler);
+        }
+
+        public override void HandleAction(
+          UIApplication application,
+          string actionIdentifier,
+          NSDictionary remoteNotificationInfo,
+          Action completionHandler)
+        {
+            DonkyiOS.HandleAction(
+              application,
+              actionIdentifier,
+              remoteNotificationInfo,
+              completionHandler);
+        }
+
+        public override void FailedToRegisterForRemoteNotifications(
+          UIApplication application,
+          NSError error)
+        {
+            DonkyiOS.FailedToRegisterForRemoteNotifications(application, error);
+        }
 	}
 }
 

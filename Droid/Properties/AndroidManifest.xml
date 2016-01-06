@@ -1,6 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.esperanceclient">
 	<uses-sdk android:minSdkVersion="15" />
+  <!-- GCM permissions -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <permission android:name="chat.esperance.apps.xamarin.permission.C2D_MESSAGE" />
+  <uses-permission android:name="chat.esperance.apps.xamarin.permission.C2D_MESSAGE" />
+  <!-- END GCM permissions -->
 	<application android:label="EsperanceClient">
 	</application>
 </manifest>
