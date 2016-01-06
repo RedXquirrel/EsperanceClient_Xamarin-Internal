@@ -18,10 +18,10 @@ namespace Chat.Esperance.Xamarin.Forms
     {
         public EsperanceApplication()
         {
-            Initialise();
+            //Initialise();
         }
 
-        private void Initialise()
+        public static void Initialise()
         {
 
             DonkyCoreAnalytics.Initialise();

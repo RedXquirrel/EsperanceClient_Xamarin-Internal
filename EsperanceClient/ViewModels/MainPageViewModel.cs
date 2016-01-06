@@ -1,4 +1,5 @@
-﻿using Com.Xamtastic.Patterns.SmallestMvvm;
+﻿using Chat.Esperance.Xamarin.Forms;
+using Com.Xamtastic.Patterns.SmallestMvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +37,7 @@ namespace EsperanceClient.ViewModels
         {
             InitialiseDonkyCommand = new Command<string>((key) =>
             {
-                var a = 0;
+                EsperanceApplication.Initialise();
             });
 
         }
