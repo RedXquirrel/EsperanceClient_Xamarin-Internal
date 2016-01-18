@@ -11,6 +11,8 @@ namespace EsperanceClient
 {
     public static class AppBootstrap
     {
+        public static bool LoggedIn { get; set; }
+
         public static void Initialise()
         {
             // Initialise any Esperance modules (except Core) here

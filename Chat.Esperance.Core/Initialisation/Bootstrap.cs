@@ -37,6 +37,11 @@ namespace Chat.Esperance.Core.Initialisation
                 c => new EsperanceHttpClient())
                 .As<IHttpClient>()
                 .SingleInstance();
+
+            AutofacObjectBuilder.ContainerBuilder.Register(
+                c => new RegistrationManager())
+                .As<IRegistrationManager>()
+                .SingleInstance();
         }
 
         private static void RegisterEsperanceApi()
@@ -48,10 +53,10 @@ namespace Chat.Esperance.Core.Initialisation
                 .As<IEsperanceCore>()
                 .SingleInstance();
 
-            // Register the public controller interfaces as mappings
+             //Register the public controller interfaces as mappings
             //AutofacObjectBuilder.ContainerBuilder.Register(c =>
             //    c.Resolve<IRegistrationManager>())
-            //    .As<IRegistrationController>()
+            //    .As<IRegistrationManager>()
             //    .SingleInstance();
 
             //AutofacObjectBuilder.ContainerBuilder.Register(c =>

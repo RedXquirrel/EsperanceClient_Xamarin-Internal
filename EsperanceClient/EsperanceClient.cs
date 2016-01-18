@@ -11,7 +11,15 @@ namespace EsperanceClient
 		public App ()
 		{
 			// The root page of your application
-			MainPage = new MainPage();
+
+            if (AppBootstrap.LoggedIn)
+            {
+                MainPage = new MainPage();
+            }
+            else
+            {
+                MainPage = new LoginPage();
+            }
 		}
 
 		protected override void OnStart ()

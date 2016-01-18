@@ -28,6 +28,10 @@ namespace EsperanceClient.Droid
         {
             base.OnCreate();
 
+            // Check authentication here
+
+            AppBootstrap.LoggedIn = false;
+
             DonkyAndroid.Initialise();
             DonkyPushUIAndroid.Initialise();
             //DonkyRichPopupUIAndroid.Initialise();

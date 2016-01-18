@@ -18,6 +18,8 @@ namespace EsperanceClient.iOS
 		{
 			global::Xamarin.Forms.Forms.Init ();
 
+            AppBootstrap.LoggedIn = false;
+
             DonkyiOSForms.Init();         // Xamarin Forms Custom iOS Renderers
             ImageCircleRenderer.Init();
             DonkyiOS.Initialise();        // Xamarin.iOS framework

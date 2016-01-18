@@ -1,4 +1,5 @@
 ﻿using Chat.Esperance.Core.Framework.DependencyInjection;
+using Chat.Esperance.Core.Framework.Registration;
 using Chat.Esperance.Core.Initialisation;
 using System;
 using System.Collections.Generic;
@@ -52,6 +53,7 @@ namespace Chat.Esperance.Core
         private static IEsperanceCore CreateInstance()
         {
             EnsureInitialised();
+
             return Bootstrap.Builder.BuildObject<IEsperanceCore>();
         }
 
