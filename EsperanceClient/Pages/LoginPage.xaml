@@ -2,17 +2,130 @@
 <mvvm:PageBase xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mvvm="clr-namespace:Com.Xamtastic.Patterns.SmallestMvvm;assembly=Com.Xamtastic.Patterns.SmallestMvvm"
+               xmlns:converters="clr-namespace:EsperanceClient.Converters;assembly=EsperanceClient"
              x:Class="EsperanceClient.Pages.LoginPage">
   <mvvm:PageBase.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" WinPhone="20,20,20,20" />
   </mvvm:PageBase.Padding>
-  <StackLayout>
-    <Label Text="Username" />
-    <Entry Text="{Binding UserNameText, Mode=TwoWay}" /> 
-    <Label Text="Password" />
-    <Entry Text="{Binding PasswordText, Mode=TwoWay}" IsPassword="True" /> 
-    <Button Text="Login" Command="{Binding LoginCommand, Mode=TwoWay}" HorizontalOptions="End" />
-  </StackLayout>
+  <mvvm:PageBase.Resources>
+        <ResourceDictionary>
+          <converters:TargetIdiomToBooleanConverter x:Key="TargetIdiomToBooleanConverter" />
+          <converters:DeviceOrientationToBooleanConverter x:Key="DeviceOrientationToBooleanConverter" />
+        </ResourceDictionary>
+  </mvvm:PageBase.Resources>
+  <Grid>
+  <ScrollView IsVisible="{Binding TargetIdiom, Converter={StaticResource TargetIdiomToBooleanConverter}, ConverterParameter=Desktop}" BackgroundColor="Yellow">
+    <Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Portrait}">
+        <Label Text="Desktop Idiom / Portrait Orientation UI yet to be created" FontAttributes="Bold" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center" />
+      </Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Landscape}">
+        <Label Text="Desktop Idiom / Landscape Orientation UI yet to be created" FontAttributes="Bold" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center" />
+      </Grid>
+    </Grid>
+  </ScrollView>
+  
+  <ScrollView IsVisible="{Binding TargetIdiom, Converter={StaticResource TargetIdiomToBooleanConverter}, ConverterParameter=Phone}">
+    <Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Portrait}">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="0" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="0" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="15" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="15" />
+      </Grid.ColumnDefinitions>
 
-  <!--<Label Text="{Binding Message}" VerticalOptions="Center" HorizontalOptions="Center" />-->
+    <Label Grid.Column="1" Text="ESPERANCE" FontAttributes="Bold" HorizontalOptions="Center" />
+
+    <StackLayout Grid.Row="2" Grid.Column="1">
+      <Label Text="Login" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Small" />
+      <Label Text="Username" FontAttributes="Bold" FontSize="Micro" />
+      <Entry Text="{Binding UserNameText, Mode=TwoWay}" FontSize="Micro" />
+      <Label Text="Password" FontAttributes="Bold" FontSize="Micro" />
+      <Entry Text="{Binding PasswordText, Mode=TwoWay}" IsPassword="True" FontSize="Micro" />
+      <Button Text="Login" Command="{Binding LoginCommand, Mode=TwoWay}" HorizontalOptions="End" FontSize="Micro" />
+    </StackLayout>
+
+    <StackLayout Grid.Row="4" Grid.Column="1">
+      <Label Text="Register" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Small" />
+      <Label Text="Username" FontAttributes="Bold" FontSize="Micro" />
+      <Entry Text="{Binding UserNameText, Mode=TwoWay}" FontSize="Micro" />
+      <Label Text="Phone Number" FontAttributes="Bold" FontSize="Micro" />
+      <Entry Text="{Binding PhoneNumberText, Mode=TwoWay}" FontSize="Micro" />
+      <Label Text="Password" FontAttributes="Bold" FontSize="Micro" />
+      <Entry Text="{Binding PasswordText, Mode=TwoWay}" IsPassword="True" FontSize="Micro" />
+      <Label Text="Confirm Password" FontAttributes="Bold" FontSize="Micro" />
+      <Entry Text="{Binding ConfirmPasswordText, Mode=TwoWay}" IsPassword="True" FontSize="Micro" />      
+      <Button Text="Register" Command="{Binding RegisterCommand, Mode=TwoWay}" HorizontalOptions="End" FontSize="Micro" />
+    </StackLayout>
+  </Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Landscape}">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="15" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="5" />
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="15" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" Text="ESPERANCE" FontAttributes="Bold" HorizontalOptions="Center" />
+
+        <StackLayout Grid.Row="1" Grid.Column="1">
+          <Label Text="Login" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Small" />
+          <Label Text="Username" FontAttributes="Bold" FontSize="Micro" />
+          <Entry Text="{Binding UserNameText, Mode=TwoWay}" FontSize="Micro" />
+          <Label Text="Password" FontAttributes="Bold" FontSize="Micro" />
+          <Entry Text="{Binding PasswordText, Mode=TwoWay}" IsPassword="True" FontSize="Micro" />
+          <Button Text="Login" Command="{Binding LoginCommand, Mode=TwoWay}" HorizontalOptions="End" FontSize="Micro" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Grid.Column="3">
+          <Label Text="Register" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Small" />
+          <Label Text="Username" FontAttributes="Bold" FontSize="Micro" />
+          <Entry Text="{Binding UserNameText, Mode=TwoWay}" FontSize="Micro" />
+          <Label Text="Phone Number" FontAttributes="Bold" FontSize="Micro" />
+          <Entry Text="{Binding PhoneNumberText, Mode=TwoWay}" FontSize="Micro" />
+          <Label Text="Password" FontAttributes="Bold" FontSize="Micro" />
+          <Entry Text="{Binding PasswordText, Mode=TwoWay}" IsPassword="True" FontSize="Micro" />
+          <Label Text="Confirm Password" FontAttributes="Bold" FontSize="Micro" />
+          <Entry Text="{Binding ConfirmPasswordText, Mode=TwoWay}" IsPassword="True" FontSize="Micro" />
+          <Button Text="Register" Command="{Binding RegisterCommand, Mode=TwoWay}" HorizontalOptions="End" FontSize="Micro" />
+        </StackLayout>
+    </Grid>
+    </Grid>
+  </ScrollView>
+
+  <ScrollView IsVisible="{Binding TargetIdiom, Converter={StaticResource TargetIdiomToBooleanConverter}, ConverterParameter=Tablet}" BackgroundColor="Yellow">
+    <Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Portrait}">
+        <Label Text="Tablet Idiom / Portrait Orientation UI yet to be created" FontAttributes="Bold" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center" />
+      </Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Landscape}">
+        <Label Text="Tablet Idiom / Landscape Orientation UI yet to be created" FontAttributes="Bold" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center" />
+      </Grid>
+    </Grid>
+  </ScrollView>
+
+  <ScrollView IsVisible="{Binding TargetIdiom, Converter={StaticResource TargetIdiomToBooleanConverter}, ConverterParameter=Unsupported}" BackgroundColor="Yellow">
+    <Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Portrait}">
+        <Label Text="Unsupported Idiom / Portrait Orientation UI yet to be created" FontAttributes="Bold" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center" />
+      </Grid>
+      <Grid IsVisible="{Binding DeviceOrientation, Converter={StaticResource DeviceOrientationToBooleanConverter}, ConverterParameter=Landscape}">
+        <Label Text="Unsupported Idiom / Landscape Orientation UI yet to be created" FontAttributes="Bold" FontSize="Micro" HorizontalOptions="Center" VerticalOptions="Center" />
+      </Grid>
+    </Grid>
+  </ScrollView>
+  </Grid>
 </mvvm:PageBase>

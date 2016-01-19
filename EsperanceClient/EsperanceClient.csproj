@@ -35,7 +35,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AppBootstrap.cs" />
+    <Compile Include="Converters\DeviceOrientationToBooleanConverter.cs" />
+    <Compile Include="Converters\TargetIdiomToBooleanConverter.cs" />
     <Compile Include="EsperanceClient.cs" />
+    <Compile Include="Models\DeviceOrientation.cs" />
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>

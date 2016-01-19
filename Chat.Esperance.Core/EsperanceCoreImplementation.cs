@@ -18,10 +18,17 @@ namespace Chat.Esperance.Core
     internal class EsperanceCoreImplementation : IEsperanceCore
     {
         private readonly IRegistrationManager _registrationManager;
+        private readonly IObjectBuilder _builder;
 
         internal EsperanceCoreImplementation(IRegistrationManager registrationManager, IObjectBuilder builder)
         {
             _registrationManager = registrationManager;
+            _builder = builder;
+        }
+
+        public T GetService<T>() where T : class
+        {
+            return _builder.BuildObject<T>();
         }
     }
 }

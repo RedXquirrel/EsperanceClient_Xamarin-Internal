@@ -13,5 +13,10 @@ namespace Chat.Esperance.Core.Framework.Registration
         {
             return new Task<string>(() => { return "success"; });
         }
+
+        public Task<GetTokenResponseModel> GetToken(string tokenUri, string username, string password, string grantType, string clientId, string clientSecret)
+        {
+            return new Task<GetTokenResponseModel>(() => { return new GetTokenResponseModel(); });
+        }
     }
 }

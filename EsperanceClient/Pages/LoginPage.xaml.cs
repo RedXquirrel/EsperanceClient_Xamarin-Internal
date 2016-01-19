@@ -12,9 +12,18 @@ namespace EsperanceClient.Pages
     [ViewModelType(typeof(LoginPageViewModel))]
     public partial class LoginPage : PageBase
     {
+        static bool IsPortrait(Page p) { return p.Width < p.Height; }
+
         public LoginPage()
         {
             InitializeComponent();
+
+            SizeChanged += (sender, e) =>
+            {
+                var portrait = IsPortrait(this);
+
+                ((LoginPageViewModel)this.BindingContext).DeviceOrientation = IsPortrait(this) ? EsperanceClient.Models.DeviceOrientation.Portrait : EsperanceClient.Models.DeviceOrientation.Landscape;
+            };
         }
     }
 }

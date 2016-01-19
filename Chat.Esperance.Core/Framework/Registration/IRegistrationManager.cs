@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Chat.Esperance.Core.Framework.Registration
 {
-    internal interface IRegistrationManager
+    public interface IRegistrationManager
     {
         Task<string> RegisterUser(EsperanceUser user);
+        Task<GetTokenResponseModel> GetToken(string tokenUri, string username, string password, string grantType, string clientId, string clientSecret);
     }
 }
